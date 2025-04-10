@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  stitcher:
+    build: ./stitcher
+    container_name: stitcher-api
+    ports:
+      - "8000:8000"  # HTTP
+      - "50051:50051"  # gRPC
+    environment:
+      - STITCH_KEY=dev-secret-key
+    volumes:
+      - ./stitcher/uploads:/app/uploads
+    restart: unless-stopped
+    command: python start_servers.py

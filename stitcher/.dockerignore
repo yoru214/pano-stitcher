@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+*.db
+app/stitcher_pb2.py
+app/stitcher_pb2_grpc.py
+uploads/

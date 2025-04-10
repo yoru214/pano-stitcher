@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+.env
+.env.*
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+*.sock
+docker-compose.override.yml
+
+# Editors
+.vscode/
+.idea/
+
+# Outputs
+stitcher/app/images/src/
+stitcher/app/images/output/
+uploads/
+
+# Auto-generated gRPC files
+stitcher/app/stitcher_pb2.py
+stitcher/app/stitcher_pb2_grpc.py
+
+# Protobuf cache
+*.pb.go
+*.pb.cc
+*.pb.h

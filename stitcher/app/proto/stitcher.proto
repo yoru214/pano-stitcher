@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package stitcher;
+
+service Stitcher {
+  rpc Process (StitchRequest) returns (StitchResponse);
+}
+
+message ImageData {
+  string filename = 1;
+  bytes content = 2;
+}
+
+message StitchRequest {
+  repeated ImageData images = 1;
+  string format = 2;  // e.g. "webp", "jpg", "jpeg"
+  string key = 3;
+}
+
+message StitchResponse {
+  string filename = 1;
+  bytes stitched_image = 2;
+  string content_type = 3;
+  string message = 4;
+}
